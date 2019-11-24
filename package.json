@@ -1,0 +1,25 @@
+{
+    "name": "aem-snippets-vscode",
+    "publisher": "ManuelDanielGutierrezMarin",
+    "displayName": "AEM Snippets",
+    "description": "Code snippets for AEM applications",
+    "version": "0.1.0",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/drginm/aem-snippets-vscode.git"
+    },
+    "engines": {
+        "vscode": "^1.38.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "html",
+                "path": "./snippets/html.json"
+            }
+        ]
+    }
+}

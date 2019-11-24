@@ -1,0 +1,53 @@
+{
+	"HTL Comments": {
+        "prefix": ["htl.elem.comments", "heco"],
+        "body": [
+            "<!--/*",
+                "\t$1",
+            "*/-->$0"
+        ],
+        "description": "HTL Comments"
+    },
+	"Include HTL script HTML Element": {
+        "prefix": ["htl.elem.inc.script", "heis"],
+        "body": [
+            "<${1:sly} data-sly-include=\"$2.html\" ${3:data-sly-unwrap}/>$0"
+        ],
+        "description": "Include HTL script HTML Element"
+    },
+	"Include HTL script HTML Attribute": {
+        "prefix": ["htl.attr.inc.script", "hais"],
+        "body": [
+            "data-sly-include=\"$2.html\""
+        ],
+        "description": "Include HTL script HTML Attribute"
+    },
+	"Include Java Model HTML Element": {
+        "prefix": ["htl.elem.inc.model", "heim"],
+        "body": [
+            "<${1:sly} data-sly-use.${2:modelVar}=\"${3:co.dlighthouse.core.models.MyModel}\"/>$0"
+        ],
+        "description": "Include Java Model HTML Element"
+    },
+	"Include Java Model HTML Attribute": {
+        "prefix": ["htl.attr.inc.model", "haim"],
+        "body": [
+            "data-sly-use.${2:modelVar}=\"${3:co.dlighthouse.core.models.MyModel}\""
+        ],
+        "description": "Include Java Model HTML Attribute"
+    },
+	"Include Component HTML Element": {
+        "prefix": ["htl.elem.inc.component", "heic"],
+        "body": [
+            "<${1:sly} data-sly-resource=\"${ @path='${2:nodeName}', resourceType='${3:componentPath}'}\"></${1:sly}>$0"
+        ],
+        "description": "Include Component HTML Element"
+    },
+	"Include Component HTML Attribute": {
+        "prefix": ["htl.attr.inc.component", "haic"],
+        "body": [
+            "data-sly-resource=\"${ @path='${2:nodeName}', resourceType='${3:componentPath}'}\""
+        ],
+        "description": "Include Component HTML Attribute"
+    }
+}
