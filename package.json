@@ -3,11 +3,12 @@
     "publisher": "ManuelDanielGutierrezMarin",
     "displayName": "AEM Snippets",
     "description": "Code snippets for AEM applications",
-    "version": "0.1.0",
+    "version": "0.3.0",
     "repository": {
         "type": "git",
-        "url": "git://github.com/drginm/aem-snippets-vscode.git"
+        "url": "https://github.com/drginm/aem-snippets-vscode"
     },
+    "icon": "images/icon.png",
     "engines": {
         "vscode": "^1.38.0"
     },
@@ -19,6 +20,22 @@
             {
                 "language": "html",
                 "path": "./snippets/html.json"
+            },
+            {
+                "language": "java",
+                "path": "./snippets/java-sling-job.json"
+            },
+            {
+                "language": "java",
+                "path": "./snippets/java-sling-servlet.json"
+            },
+            {
+                "language": "xml",
+                "path": "./snippets/xml-dialog-classic.json"
+            },
+            {
+                "language": "xml",
+                "path": "./snippets/xml-dialog-touch.json"
             }
         ]
     }

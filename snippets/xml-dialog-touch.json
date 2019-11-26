@@ -1,0 +1,57 @@
+{
+	"Dialog Node - Touch UI Dialog": {
+        "prefix": ["aem.dlg.touch.dialog", "adtd"],
+        "body": [
+            "<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
+            "<jcr:root xmlns:sling=\"http://sling.apache.org/jcr/sling/1.0\" xmlns:cq=\"http://www.day.com/jcr/cq/1.0\" xmlns:jcr=\"http://www.jcp.org/jcr/1.0\" xmlns:nt=\"http://www.jcp.org/jcr/nt/1.0\" xmlns:granite=\"http://www.adobe.com/jcr/granite/1.0\"",
+                "\tjcr:primaryType=\"nt:unstructured\"",
+                "\tjcr:title=\"${1:Properties}\"",
+                "\tsling:resourceType=\"cq/gui/components/authoring/dialog\">",
+                "\t<content",
+                    "\t\tjcr:primaryType=\"nt:unstructured\"",
+                    "\t\tsling:resourceType=\"granite/ui/components/coral/foundation/fixedcolumns\">",
+                    "\t\t<items jcr:primaryType=\"nt:unstructured\">",
+                        "\t\t\t<column",
+                            "\t\t\t\tjcr:primaryType=\"nt:unstructured\"",
+                            "\t\t\t\tsling:resourceType=\"granite/ui/components/coral/foundation/container\">",
+                            "\t\t\t\t<items jcr:primaryType=\"nt:unstructured\">",
+                                "\t\t\t\t\t$0",
+                            "\t\t\t\t</items>",
+                        "\t\t\t</column>",
+                    "\t\t</items>",
+                "\t</content>",
+            "</jcr:root>"
+        ],
+        "description": "Dialog Node - Touch UI Dialog"
+    },
+	"Checkbox - Touch UI Dialog": {
+        "prefix": ["aem.dlg.touch.checkbox", "adtch"],
+        "body": [
+            "<${1:nodeName}",
+                "\tjcr:primaryType=\"nt:unstructured\"",
+                "\tsling:resourceType=\"granite/ui/components/foundation/form/checkbox\"",
+                "\ttext=\"${2:Checkbox Label}\"",
+                "\tname=\"./$1\"",
+                "\tvalue=\"true\"",
+                "\tuncheckedValue=\"false\"/>",
+            "<$1TypeHint",
+                "\tjcr:primaryType=\"nt:unstructured\"",
+                "\tsling:resourceType=\"granite/ui/components/foundation/form/hidden\"",
+                "\tname=\"./$1@TypeHint\"",
+                "\tvalue=\"Boolean\"/>"
+        ],
+        "description": "Checkbox - Touch UI Dialog"
+    },
+	"Textfield - Touch UI Dialog": {
+        "prefix": ["aem.dlg.touch.textfield", "adctf"],
+        "body": [
+            "<${1:nodeName}",
+                "\tjcr:primaryType=\"nt:unstructured\"",
+                "\tsling:resourceType=\"granite/ui/components/coral/foundation/form/textfield\"",
+                "\tfieldLabel=\"${2:Textfield Label}\"",
+                "\tname=\"./${1:nodeName}\"",
+                "\tfieldName=\"./${1:nodeName}\"/>"
+        ],
+        "description": "Textfield - Touch UI Dialog"
+    }
+}

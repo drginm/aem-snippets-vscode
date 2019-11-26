@@ -11,6 +11,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - HTL List, templates
 
+## [0.3.0] - 2019-11-26
+### Added
+
+#### Touch UI
+- Dialog Node
+- Checkbox
+- Textfield
+
 ## [0.1.0] - 2019-11-24
 ### Added
 
