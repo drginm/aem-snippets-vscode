@@ -3,7 +3,7 @@
     "publisher": "ManuelDanielGutierrezMarin",
     "displayName": "AEM Snippets",
     "description": "Code snippets for AEM applications",
-    "version": "0.3.0",
+    "version": "0.4.0",
     "repository": {
         "type": "git",
         "url": "https://github.com/drginm/aem-snippets-vscode"
@@ -20,6 +20,10 @@
             {
                 "language": "html",
                 "path": "./snippets/html.json"
+            },
+            {
+                "language": "java",
+                "path": "./snippets/java-osgi.json"
             },
             {
                 "language": "java",

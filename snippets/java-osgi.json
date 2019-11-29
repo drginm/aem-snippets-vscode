@@ -1,0 +1,17 @@
+{
+    "OSGi Bundle Version Imports": {
+        "prefix": ["osgi.bundle.version.imports", "obvi"],
+        "body": [
+            "import org.osgi.framework.Version;",
+            "import org.osgi.framework.FrameworkUtil;"
+        ],
+        "description": "OSGi Bundle Version Imports"
+    },
+    "Get OSGi Bundle Version": {
+        "prefix": ["osgi.bundle.version.get", "obvg"],
+        "body": [
+            "Version ${1:version} = FrameworkUtil.getBundle(${2:MyClass.class}).getVersion();"
+        ],
+        "description": "Get OSGi Bundle Version"
+    }
+}

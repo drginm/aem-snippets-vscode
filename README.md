@@ -1,13 +1,14 @@
 # aem-snippets-vscode README
 
-This is a VSCode extension with AEM application snippets for HTML and Touch UI dialogs (for now)
+This is a VSCode extension with AEM application snippets for HTML, Touch UI dialogs and sling servlets (for now)
 
 ## Features
 
-For now simple htl snippets and some snippets for touch ui dialogs
+For now simple htl snippets, some snippets for touch ui dialogs and sling servlets
 
 * Type 'htl.' to see available snippets inside a .html file
 * Type 'aem.' to see available snippets inside a .xml file
+* Type 'sling.' or 'osgi.' to see available snippets inside a .java file
 
 ## Requirements
 
@@ -18,6 +19,10 @@ NONE for now :D
 NONE for now :D
 
 ## Release Notes
+
+## 0.4.0
+
+Sling servlet and osgi snippets
 
 ## 0.3.0
 
