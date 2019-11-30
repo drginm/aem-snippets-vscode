@@ -20,6 +20,10 @@ NONE for now :D
 
 ## Release Notes
 
+## 0.5.0
+
+Sling servlet snippets for older annotations
+
 ## 0.4.0
 
 Sling servlet and osgi snippets

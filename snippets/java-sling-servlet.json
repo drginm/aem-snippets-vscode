@@ -74,16 +74,57 @@
         "body": [
             "@Component(service=Servlet.class, property={",
                 "\t\"sling.servlet.paths=\"+ \"${1:/bin/path/to/servlet}\",",
-                "\t\"sling.servlet.methods=\" + ${2:HttpConstants.METHOD_GET},",
+                "\t\"sling.servlet.methods=\" + ${2:HttpConstants.METHOD_GET}",
             "})",
             "@ServiceDescription(\"${5:Servlet Description}\")"
         ],
         "description": "Sling Servlet R6 Bound by Path Annotations"
     },
+    "Sling Servlet SCR Imports": {
+        "prefix": ["sling.servlet.scr.imports", "sssi"],
+        "body": [
+            "import org.apache.felix.scr.annotations.Service;",
+            "import org.apache.felix.scr.annotations.sling.SlingServlet;",
+            "import org.apache.sling.api.SlingHttpServletRequest;",
+            "import org.apache.sling.api.SlingHttpServletResponse;",
+            "import org.apache.sling.api.servlets.HttpConstants;",
+            "import org.apache.sling.api.servlets.SlingAllMethodsServlet;",
+            "import org.apache.sling.api.servlets.SlingSafeMethodsServlet;",
+            "",
+            "import javax.servlet.Servlet;",
+            "import javax.servlet.ServletException;",
+            "import java.io.IOException;"
+        ],
+        "description": "Sling Servlet SCR Imports"
+    },
+    "Sling Servlet SCR Bound by Resource Type Annotations": {
+        "prefix": ["sling.servlet.scr.resource.annotations", "sssra"],
+        "body": [
+            "@Service(value = Servlet.class)",
+            "@SlingServlet(",
+                "\tresourceTypes = \"${1:my-app/components/my-component}\",",
+                "\tmethods = ${2:HttpConstants.METHOD_GET},",
+                "\textensions = \"${3:html}\",",
+                "\tselectors = \"${4:selector}\"",
+            ")"
+        ],
+        "description": "Sling Servlet SCR Bound by Resource Type Annotations"
+    },
+    "Sling Servlet SCR Bound by Path Annotations": {
+        "prefix": ["sling.servlet.scr.path.annotations", "ssspa"],
+        "body": [
+            "@Service(value = Servlet.class)",
+            "@SlingServlet(",
+                "\tpaths = \"${1:/bin/path/to/servlet}\",",
+                "\tmethods = ${2:HttpConstants.METHOD_GET}",
+            ")"
+        ],
+        "description": "Sling Servlet SCR Bound by Path Annotations"
+    },
     "Sling Servlet All Methods Class Definition": {
         "prefix": ["sling.servlet.class.allMethods", "sscall"],
         "body": [
-            "public class ${1:${TM_FILENAME_BASE}}Servlet extends SlingAllMethodsServlet {",
+            "public class ${1:${TM_FILENAME_BASE}} extends SlingAllMethodsServlet {",
                 "\t@Override",
                 "\tprotected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse response) throws ServletException, IOException {",
                 "\t}",
@@ -98,7 +139,7 @@
     "Sling Servlet Safe Methods Class Definition": {
         "prefix": ["sling.servlet.class.safeMethods", "sscsafe"],
         "body": [
-            "public class ${1:${TM_FILENAME_BASE}}Servlet extends SlingSafeMethodsServlet {",
+            "public class ${1:${TM_FILENAME_BASE}} extends SlingSafeMethodsServlet {",
                 "\t@Override",
                 "\tprotected void doGet(SlingHttpServletRequest request, SlingHttpServletResponse response) throws ServletException, IOException {",
                     "\t$0",
@@ -108,7 +149,7 @@
         "description": "Sling Servlet Safe Methods Class Definition"
     },
     "Sling Servlet JSON Response": {
-        "prefix": ["sling.servlet.response.json", "ssrj"],
+        "prefix": ["sling.servlet.response.json", "ssresj"],
         "body": [
             "response.setContentType(${1:\"application/json\"});",
             "response.getWriter().write(${2:\"someString\"});"
@@ -116,7 +157,7 @@
         "description": "Sling Servlet JSON Response"
     },
     "Sling Servlet HTML Response": {
-        "prefix": ["sling.servlet.response.html", "ssrh"],
+        "prefix": ["sling.servlet.response.html", "ssresh"],
         "body": [
             "response.setContentType(${1:\"text/html\"});",
             "response.getWriter().write(${2:\"someString\"});"
@@ -124,11 +165,18 @@
         "description": "Sling Servlet HTML Response"
     },
     "Sling Servlet PLain Text Response": {
-        "prefix": ["sling.servlet.response.plainText", "ssrpt"],
+        "prefix": ["sling.servlet.response.plainText", "ssrespt"],
         "body": [
             "response.setContentType(${1:\"text/plain\"});",
             "response.getWriter().write(${2:\"someString\"});"
         ],
         "description": "Sling Servlet PLain Text Response"
+    },
+    "Sling Servlet Get Query String Parameter from Request": {
+        "prefix": ["sling.servlet.request.getQueryString", "ssreqqs"],
+        "body": [
+            "String ${1:paramName} = request.getParameter(${2:\"key\"});"
+        ],
+        "description": "Sling Servlet Get Query String Parameter from Request"
     }
 }

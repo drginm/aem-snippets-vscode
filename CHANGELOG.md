@@ -11,8 +11,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - HTL List, templates
 
+## [0.5.0] - 2019-11-30
+### Added
+
 ## [0.4.0] - 2019-11-28
 ### Added
+- Sling servlets using SCR annotations
 
 #### Touch UI
 - Sling servlets using r6 annotations
