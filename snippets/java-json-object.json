@@ -1,0 +1,36 @@
+{
+    "OSGi Configuration R6 Use Configuration Imports": {
+        "prefix": ["json.commons.imports", "jci"],
+        "body": [
+            "import org.apache.sling.commons.json.JSONArray;",
+            "import org.apache.sling.commons.json.JSONException;",
+            "import org.apache.sling.commons.json.JSONObject;",
+            "import org.apache.sling.commons.json.io.JSONRenderer;"
+        ],
+        "description": "OSGi Configuration R6 Use Configuration Imports"
+    },
+    "Create New Json Object": {
+        "prefix": ["json.commons.new.object", "jcno"],
+        "body": [
+            "JSONObject ${1:jsonObjectName} = new JSONObject();",
+            "$1.put(\"${2:jsonPropertyName}\", ${3:value});$0"
+        ],
+        "description": "Json Object"
+    },
+    "Create New Json Array": {
+        "prefix": ["json.commons.new.array", "jcna"],
+        "body": [
+            "JSONArray ${1:jsonArrayName} = new JSONArray();",
+            "$1.put(${2:jsonObject});$0"
+        ],
+        "description": "Json Array"
+    },
+    "Renderer Json Object or Array": {
+        "prefix": ["json.commons.toString", "jctstr"],
+        "body": [
+            "JSONRenderer ${1:renderer} = new JSONRenderer();",
+            "String ${2:jsonString} = $1.toString(${3:jsonObject});$0"
+        ],
+        "description": "Json Object"
+    }
+}

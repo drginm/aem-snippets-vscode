@@ -1,11 +1,11 @@
 {
-    "OSGi Bundle Version Imports": {
+    "Get OSGi Bundle Version Imports": {
         "prefix": ["osgi.bundle.version.imports", "obvi"],
         "body": [
             "import org.osgi.framework.Version;",
             "import org.osgi.framework.FrameworkUtil;"
         ],
-        "description": "OSGi Bundle Version Imports"
+        "description": "Get OSGi Bundle Version Imports"
     },
     "Get OSGi Bundle Version": {
         "prefix": ["osgi.bundle.version.get", "obvg"],
@@ -13,5 +13,96 @@
             "Version ${1:version} = FrameworkUtil.getBundle(${2:MyClass.class}).getVersion();"
         ],
         "description": "Get OSGi Bundle Version"
+    },
+    "OSGi Configuration R6 Definition Imports": {
+        "prefix": ["osgi.config.r6.definition.imports", "oc6di"],
+        "body": [
+            "import org.osgi.service.metatype.annotations.AttributeDefinition;",
+            "import org.osgi.service.metatype.annotations.ObjectClassDefinition;"
+        ],
+        "description": "OSGi Configuration R6 Definition Imports"
+    },
+    "OSGi Configuration R6 Definition Annotations": {
+        "prefix": ["osgi.config.r6.definition.annotations", "oc6da"],
+        "body": [
+            "@ObjectClassDefinition(name = \"${1:Configuration Name}\")"
+        ],
+        "description": "OSGi Configuration R6 Definition Annotations"
+    },
+    "OSGi Configuration R6 Class Definition": {
+        "prefix": ["osgi.config.r6.definition.class", "oc6dc"],
+        "body": [
+            "public @interface ${1:${TM_FILENAME_BASE}} {",
+                "\t$0",
+            "}"
+        ],
+        "description": "OSGi Configuration R6 Class Definition"
+    },
+    "String Property - OSGi Configuration R6": {
+        "prefix": ["osgi.config.r6.definition.prop.string", "oc6ps"],
+        "body": [
+            "@AttributeDefinition(",
+                "\tname = \"${1:Property Label}\",",
+                "\tdescription = \"${2:Property description}\"",
+            ")",
+            "String ${3:propertyName}() default \"${4:Property default value}\";"
+        ],
+        "description": "String Property - OSGi Configuration R6"
+    },
+    "Boolean Property - OSGi Configuration R6": {
+        "prefix": ["osgi.config.r6.definition.prop.bool", "oc6pb"],
+        "body": [
+            "@AttributeDefinition(",
+                "\tname = \"${1:Property Label}\",",
+                "\tdescription = \"${2:Property description}\"",
+            ")",
+            "boolean ${3:propertyName}() default ${4:false};"
+        ],
+        "description": "Boolean Property - OSGi Configuration R6"
+    },
+    "Int Property - OSGi Configuration R6": {
+        "prefix": ["osgi.config.r6.definition.prop.int", "oc6pi"],
+        "body": [
+            "@AttributeDefinition(",
+                "\tname = \"${1:Property Label}\",",
+                "\tdescription = \"${2:Property description}\"",
+            ")",
+            "int ${3:propertyName}() default ${4:3};"
+        ],
+        "description": "Int Property - OSGi Configuration R6"
+    },
+    "OSGi Configuration R6 Use Configuration Imports": {
+        "prefix": ["osgi.config.r6.use.imports", "oc6ui"],
+        "body": [
+            "import org.osgi.service.metatype.annotations.Designate;",
+            "import org.osgi.service.component.annotations.Activate;",
+            "import org.osgi.service.component.annotations.Deactivate;",
+            "import org.osgi.service.component.annotations.Modified;"
+        ],
+        "description": "OSGi Configuration R6 Use Configuration Imports"
+    },
+    "OSGi Configuration R6 Use Configuration Annotations": {
+        "prefix": ["osgi.config.r6.use.annotations", "oc6ua"],
+        "body": [
+            "@Designate(ocd = ${1:ConfigurationClass}.class)"
+        ],
+        "description": "OSGi Configuration R6 Use Configuration  Annotations"
+    },
+    "OSGi Configuration R6 Use Configuration Class Definition": {
+        "prefix": ["osgi.config.r6.use.methods", "oc6uc"],
+        "body": [
+            "@Activate",
+            "protected void activate(${1:ConfigurationClass} config) {$0",
+            "}",
+            "",
+            "@Deactivate",
+            "protected void deactivate($1 config) {",
+            "}",
+            "",
+            "@Modified",
+            "protected void modified($1 config) {",
+            "}"
+        ],
+        "description": "OSGi Configuration R6 Use Configuration Class Definition"
     }
 }

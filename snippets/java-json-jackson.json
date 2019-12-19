@@ -1,0 +1,42 @@
+{
+    "OSGi Configuration R6 Use Configuration Imports": {
+        "prefix": ["json.jackson.imports", "jji"],
+        "body": [
+            "import com.fasterxml.jackson.databind.ObjectMapper;",
+            "import com.fasterxml.jackson.databind.node.ArrayNode;",
+            "import com.fasterxml.jackson.databind.node.ObjectNode;"
+        ],
+        "description": "OSGi Configuration R6 Use Configuration Imports"
+    },
+    "Create Jackson Object Mapper": {
+        "prefix": ["json.jackson.mapper", "jjmap"],
+        "body": [
+            "ObjectMapper ${1:mapper} = new ObjectMapper();"
+        ],
+        "description": "Create Jackson Object Mapper"
+    },
+    "Create New Jackson Json Object": {
+        "prefix": ["json.jackson.new.object", "jjno"],
+        "body": [
+            "ObjectNode ${1:jsonObjectName} = ${2:mapper}.createObjectNode();",
+            "$1.put(\"${3:jsonPropertyName}\", ${4:value});$0"
+        ],
+        "description": "Jackson Json Object"
+    },
+    "Create New Jackson Json Array": {
+        "prefix": ["json.jackson.new.array", "jjna"],
+        "body": [
+            "ArrayNode ${1:jsonArrayName} = ${2:mapper}.createArrayNode();",
+            "$0",
+            "$1.add(${3:jsonObject});"
+        ],
+        "description": "Jackson Json Array"
+    },
+    "Renderer Jackson's Json Object or Array": {
+        "prefix": ["json.jackson.toString", "jjtstr"],
+        "body": [
+            "String ${2:jsonString} = ${1:mapper}.writerWithDefaultPrettyPrinter().writeValueAsString(${3:jsonObject});"
+        ],
+        "description": "Jackson Json Mapper"
+    }
+}

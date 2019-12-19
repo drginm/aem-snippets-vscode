@@ -11,14 +11,31 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - HTL List, templates
 
+## [0.6.0] - 2019-11-30
+### Added
+
+#### OSGi configurations
+
+- R6 class definition
+- Using the R6 configuration inside another component
+- How to define simple string, int or boolean properties
+
+#### Json snippets for manual creation of objects and arrays
+
+- Json objects and arrays using the Commons library
+- Json objects and arrays using the Jackson library
+
 ## [0.5.0] - 2019-11-30
 ### Added
 
-## [0.4.0] - 2019-11-28
-### Added
+#### Sling Servlet
+
 - Sling servlets using SCR annotations
 
-#### Touch UI
+## [0.4.0] - 2019-11-28
+### Added
+
+#### Sling Servlet
 - Sling servlets using r6 annotations
 - Sling servlets using r7 annotations
 - Create sling servlet classes using safe methods or all

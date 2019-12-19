@@ -1,0 +1,12 @@
+{
+	"OSGi config header": {
+        "prefix": ["osgi.config.xml.header", "ocxh"],
+        "body": [
+            "<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
+            "<jcr:root xmlns:sling=\"http://sling.apache.org/jcr/sling/1.0\"",
+                "\txmlns:jcr=\"http://www.jcp.org/jcr/1.0\" jcr:primaryType=\"sling:OsgiConfig\"",
+                "\t${1:propertyName}=\"${2:propertyValue}\"/>"
+        ],
+        "description": "OSGi config header"
+    }
+}
