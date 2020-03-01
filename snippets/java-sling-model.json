@@ -1,0 +1,40 @@
+{
+    "Imports - Exporter - Sling Model": {
+        "prefix": ["sling.model.exporter.imports", "smei"],
+        "body": [
+            "import org.apache.sling.api.SlingHttpServletRequest;",
+            "import com.adobe.cq.export.json.ComponentExporter;",
+            "import org.apache.sling.models.annotations.Exporter;",
+            "import com.adobe.cq.export.json.ExporterConstants;"
+        ],
+        "description": "Imports - Exporter - Sling Model"
+    },
+    "Model Annotations - Exporter - Sling Model": {
+        "prefix": ["sling.model.exporter.annotations", "smema"],
+        "body": [
+            "@Model(adaptables = SlingHttpServletRequest.class,",
+                    "\t\tadapters = {ComponentExporter.class},",
+                    "\t\tresourceType = ${1:\"my-app/components/my-component\"})",
+            "@Exporter(name = ExporterConstants.SLING_MODEL_EXPORTER_NAME, extensions = ExporterConstants.SLING_MODEL_EXTENSION)"
+        ],
+        "description": "Model Annotations - Exporter - Sling Model"
+    },
+    "Get Exported Type Method - Exporter - Sling Model": {
+        "prefix": ["sling.model.exporter.exportedTypeMethod", "smeem"],
+        "body": [
+            "public String getExportedType() {",
+                "\treturn ${1:\"my-app/components/my-component\"};",
+            "}"
+        ],
+        "description": "Get Exported Type Method - Exporter - Sling Model"
+    },
+    "Model Definition - Exporter - Sling Model": {
+        "prefix": ["sling.model.exporter.modeDefinition", "smemd"],
+        "body": [
+            "public class ${1:${TM_FILENAME_BASE}} implements ComponentExporter {",
+                "\t$0",
+            "}"
+        ],
+        "description": "Model Definition - Exporter - Sling Model"
+    }
+}

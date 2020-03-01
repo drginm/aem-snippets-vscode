@@ -1,5 +1,5 @@
 {
-	"HTL Comments": {
+    "HTL Comments": {
         "prefix": ["htl.elem.comments", "heco"],
         "body": [
             "<!--/*",
@@ -8,46 +8,127 @@
         ],
         "description": "HTL Comments"
     },
-	"Include HTL script HTML Element": {
+    "Include HTL script HTML Element": {
         "prefix": ["htl.elem.inc.script", "heis"],
         "body": [
             "<${1:sly} data-sly-include=\"$2.html\" ${3:data-sly-unwrap}/>$0"
         ],
         "description": "Include HTL script HTML Element"
     },
-	"Include HTL script HTML Attribute": {
+    "Include HTL script HTML Attribute": {
         "prefix": ["htl.attr.inc.script", "hais"],
         "body": [
             "data-sly-include=\"$2.html\""
         ],
         "description": "Include HTL script HTML Attribute"
     },
-	"Include Java Model HTML Element": {
+    "Include Java Model HTML Element": {
         "prefix": ["htl.elem.inc.model", "heim"],
         "body": [
             "<${1:sly} data-sly-use.${2:modelVar}=\"${3:co.dlighthouse.core.models.MyModel}\"/>$0"
         ],
         "description": "Include Java Model HTML Element"
     },
-	"Include Java Model HTML Attribute": {
+    "Include Java Model HTML Attribute": {
         "prefix": ["htl.attr.inc.model", "haim"],
         "body": [
             "data-sly-use.${2:modelVar}=\"${3:co.dlighthouse.core.models.MyModel}\""
         ],
         "description": "Include Java Model HTML Attribute"
     },
-	"Include Component HTML Element": {
+    "Include Component HTML Element": {
         "prefix": ["htl.elem.inc.component", "heic"],
         "body": [
             "<${1:sly} data-sly-resource=\"${ @path='${2:nodeName}', resourceType='${3:componentPath}'}\"></${1:sly}>$0"
         ],
         "description": "Include Component HTML Element"
     },
-	"Include Component HTML Attribute": {
+    "Include Component HTML Attribute": {
         "prefix": ["htl.attr.inc.component", "haic"],
         "body": [
             "data-sly-resource=\"${ @path='${2:nodeName}', resourceType='${3:componentPath}'}\""
         ],
         "description": "Include Component HTML Attribute"
+    },
+    "HTL List Iterator": {
+        "prefix": ["htl.elem.list", "hel"],
+        "body": [
+            "<${1:ul} data-sly-list=\"$${$2}\">",
+                "\t<${3:li}>$${$4}</${3:li}>",
+            "</${1:ul}>$0"
+        ],
+        "description": "HTL List Iterator"
+    },
+    "Define HTL template": {
+        "prefix": ["htl.elem.template.define", "hetd"],
+        "body": [
+            "<template data-sly-template.${1:templateName} =\"${@ ${2:params}}\">",
+                "\t<${3:li}>\\${$4\\}</${3:li}>",
+            "</template>$0"
+        ],
+        "description": "Define HTL template"
+    },
+    "Call HTL template": {
+        "prefix": ["htl.elem.template.call", "hetc"],
+        "body": [
+            "<${1:div} data-sly-call=\"${${2:templateName} @ ${3:variableName}=${4:variableValue}}\"></${1:div}>$0"
+        ],
+        "description": "Call HTL template"
+    },
+    "HTL variable": {
+        "prefix": ["htl.elem.variable", "hev"],
+        "body": [
+            "<sly data-sly-test.${1:variableName}=\"${2:variableValue}\"/>$0"
+        ],
+        "description": "HTL variable"
+    },
+    "HTL Test Attribute": {
+        "prefix": ["htl.attr.test", "het"],
+        "body": [
+            "data-sly-test=\"${1:condition}\""
+        ],
+        "description": "HTL Test Attribute"
+    },
+    "Ternary WCM Edit": {
+        "prefix": ["htl.val.test.editMode", "hetem"],
+        "body": [
+            "${wcmmode.edit ? '$1' : '$2'}$0"
+        ],
+        "description": "Ternary WCM Edit"
+    },
+    "Define - Clientlibs - HTL": {
+        "prefix": ["htl.elem.clientlib.define", "hecld"],
+        "body": [
+            "<${1:sly} data-sly-use.clientLib=\"${'/libs/granite/sightly/templates/clientlib.html'}\">"
+        ],
+        "description": "Define - Clientlibs - HTL"
+    },
+    "Define Attribute - Clientlibs - HTL": {
+        "prefix": ["htl.attr.clientlib.define", "hacld"],
+        "body": [
+            "data-sly-use.clientLib=\"${'/libs/granite/sightly/templates/clientlib.html'}\""
+        ],
+        "description": "Define Attribute - Clientlibs - HTL"
+    },
+    "Include Js and CSS - Clientlibs - HTL": {
+        "prefix": ["htl.elem.clientlib.include.all", "hecia"],
+        "body": [
+            "<meta data-sly-call=\"${clientLib.all @ categories='${1:your.clientlib}'}\" data-sly-unwrap></meta>"
+        ],
+        "description": "Include Js and CSS - Clientlibs - HTL"
+    },
+    "Include Js - Clientlibs - HTL": {
+        "prefix": ["htl.elem.clientlib.include.all", "hecia"],
+        "body": [
+            "<meta data-sly-call=\"${clientLib.js @ categories='${1:your.clientlib}'}\" data-sly-unwrap></meta>"
+        ],
+        "description": "Include Js - Clientlibs - HTL"
+    },
+    "Include CSS - Clientlibs - HTL": {
+        "prefix": ["htl.elem.clientlib.include.all", "hecia"],
+        "body": [
+            "<meta data-sly-call=\"${clientLib.css @ categories='${1:your.clientlib}'}\" data-sly-unwrap></meta>"
+        ],
+        "description": "Include CSS - Clientlibs - HTL"
     }
 }

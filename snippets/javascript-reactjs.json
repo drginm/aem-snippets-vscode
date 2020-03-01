@@ -1,0 +1,56 @@
+{
+    "Component Imports - React - AEM": {
+        "prefix": ["aem.react.component.imports", "arci"],
+        "body": [
+            "import React, { Component } from 'react';",
+            "import { MapTo } from '@adobe/cq-react-editable-components';"
+        ],
+        "description": "Component Imports - React - AEM"
+	},
+    "Component EditConfig - React - AEM": {
+        "prefix": ["aem.react.component.editConfig", "arcec"],
+        "body": [
+            "/**",
+            "* Default Edit configuration for the ${1:HelloWorld} component",
+            "*",
+            "* @type EditConfig",
+            "*/",
+            "const $1EditConfig = {",
+                "\temptyLabel: '${2:Hello World}',",
+            "",
+                "\tisEmpty: function(props) {",
+                    "\t\treturn !props || !props.${3:text};",
+                "\t}",
+            "};"
+        ],
+        "description": "Component EditConfig - React - AEM"
+	},
+    "Component Definition - React - AEM": {
+        "prefix": ["aem.react.component.definition", "arcd"],
+        "body": [
+            "/**",
+            "* ${1:HelloWorld} React component",
+            "*/",
+            "class $1 extends Component {",
+                "\trender() {",
+                    "\t\treturn (",
+                        "\t\t\t<div>",
+                            "\t\t\t\t${3:My Property Value}: {this.props.${4:text}}$0",
+                        "\t\t\t</div>",
+                    "\t\t);",
+                "\t}",
+            "}"
+        ],
+        "description": "Component Definition - React - AEM"
+	},
+    "Map to AEM Component - React - AEM": {
+        "prefix": ["aem.react.component.mapTo", "arcm"],
+        "body": [
+            "export default MapTo('${2:my-app/components/hello-world}')(",
+                "\t${1:HelloWorld},",
+                "\t$1EditConfig",
+            ");"
+        ],
+        "description": "Map to AEM Component - React - AEM"
+	}
+}

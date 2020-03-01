@@ -104,5 +104,29 @@
             "}"
         ],
         "description": "OSGi Configuration R6 Use Configuration Class Definition"
+    },
+    "Import package - Feature Toggles": {
+        "prefix": ["osgi.featuretoggles.import", "ofti"],
+        "body": [
+            "import org.apache.sling.featureflags.Features;"
+        ],
+        "description": "Import package - Feature Toggles"
+    },
+    "Check if feature is enabled - Feature Toggles": {
+        "prefix": ["osgi.featuretoggles.check", "oftc"],
+        "body": [
+            "if(features.isEnabled(${1:\"some-feature\"})) {",
+                "\t$0",
+            "}"
+        ],
+        "description": "Check if feature is enabled - Feature Toggles"
+    },
+    "Inject Feature Toggles interface - Feature Toggles": {
+        "prefix": ["osgi.featuretoggles.injectservice", "oftis"],
+        "body": [
+            "@OSGiService",
+            "private Features features;"
+        ],
+        "description": "Inject Feature Toggles interface - Feature Toggles"
     }
 }

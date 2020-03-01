@@ -7,18 +7,18 @@ This is a VSCode extension with AEM application snippets for HTML, Touch UI dial
 For now simple htl snippets, some snippets for touch ui dialogs, sling servlets, osgi configurations and json object creation
 
 * Type 'htl.' to see available snippets inside a .html file
-* Type 'aem.' or 'osgi.' to see available snippets inside a .xml file
+* Type 'aem.' or 'osgi.' to see available snippets inside a .xml or .js file
 * Type 'sling.' or 'osgi.' to see available snippets inside a .java file
-
-## Requirements
-
-NONE for now :D
 
 ## Known Issues
 
 NONE for now :D
 
 ## Release Notes
+
+## 0.7.0
+
+Feature toggle, ReactJs snippets and also HTL snippets for HTML files for lists, clientlibs, templates, variables and new field types for Touch UI dialogs
 
 ## 0.6.0
 

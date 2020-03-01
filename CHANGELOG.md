@@ -9,9 +9,35 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-- HTL List, templates
+- Sling jobs, workflows, unit tests
 
-## [0.6.0] - 2019-11-30
+## [0.7.0] - 2020-03-01
+### Added
+
+#### ReactJs
+- ReactJs components
+- Sling model exporter configurations
+
+#### Sling
+- Feature Toggles
+
+#### HTL
+
+- Lists
+- Templates call and define
+- var
+- modes
+- test
+- clientlibs, include script, call all, css, js
+
+#### Touch UI
+- Textarea
+- Pathfield
+- Image
+- DropDown
+- DropDown Item
+
+## [0.6.0] - 2019-12-18
 ### Added
 
 #### OSGi configurations

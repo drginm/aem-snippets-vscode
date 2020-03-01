@@ -1,5 +1,5 @@
 {
-	"Dialog Node - Touch UI Dialog": {
+    "Dialog Node - Touch UI Dialog": {
         "prefix": ["aem.dlg.touch.dialog", "adtd"],
         "body": [
             "<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
@@ -24,7 +24,7 @@
         ],
         "description": "Dialog Node - Touch UI Dialog"
     },
-	"Checkbox - Touch UI Dialog": {
+    "Checkbox - Touch UI Dialog": {
         "prefix": ["aem.dlg.touch.checkbox", "adtch"],
         "body": [
             "<${1:nodeName}",
@@ -42,7 +42,7 @@
         ],
         "description": "Checkbox - Touch UI Dialog"
     },
-	"Textfield - Touch UI Dialog": {
+    "Textfield - Touch UI Dialog": {
         "prefix": ["aem.dlg.touch.textfield", "adctf"],
         "body": [
             "<${1:nodeName}",
@@ -53,5 +53,81 @@
                 "\tfieldName=\"./${1:nodeName}\"/>"
         ],
         "description": "Textfield - Touch UI Dialog"
+    },
+    "Textarea - Touch UI Dialog": {
+        "prefix": ["aem.dlg.touch.textarea", "adcta"],
+        "body": [
+            "<${1:nodeName}",
+                "\tjcr:primaryType=\"nt:unstructured\"",
+                "\tsling:resourceType=\"granite/ui/components/coral/foundation/form/textarea\"",
+                "\tfieldLabel=\"${2:Textarea Label}\"",
+                "\tname=\"./${1:nodeName}\"",
+                "\tfieldName=\"./${1:nodeName}\"/>",
+                "\trows=\"10\"",
+                "\tresize=\"vertical\""
+        ],
+        "description": "Textarea - Touch UI Dialog"
+    },
+    "Pathfield - Touch UI Dialog": {
+        "prefix": ["aem.dlg.touch.pathfield", "adcpf"],
+        "body": [
+            "<${1:nodeName}",
+                "\tjcr:primaryType=\"nt:unstructured\"",
+                "\tsling:resourceType=\"granite/ui/components/coral/foundation/form/textarea\"",
+                "\tfieldLabel=\"${2:Pathfield Label}\"",
+                "\tname=\"./${1:nodeName}\"",
+                "\tfieldName=\"./${1:nodeName}\"/>",
+                "\trootPath=\"/content\""
+        ],
+        "description": "Pathfield - Touch UI Dialog"
+    },
+    "Image - Touch UI Dialog": {
+        "prefix": ["aem.dlg.touch.pathfield", "adcpf"],
+        "body": [
+            "<${1:elementName}",
+                "\tjcr:primaryType=\"nt:unstructured\"",
+                "\tsling:resourceType=\"cq/gui/components/authoring/dialog/fileupload\"",
+                "\tautoStart=\"{Boolean}false\"",
+                "\tclass=\"cq-droptarget\"",
+                "\tfileNameParameter=\"./${2:file}Name\"",
+                "\tfileReferenceParameter=\"./$2Reference\"",
+                "\tmimeTypes=\"[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]\"",
+                "\tmultiple=\"{Boolean}false\"",
+                "\tname=\"./$2\"",
+                "\ttitle=\"${3:Textfield Label}\"",
+                "\tuploadUrl=\"${suffix.path}\"",
+                "\tuseHTML5=\"{Boolean}true\"/>"
+        ],
+        "description": "Image - Touch UI Dialog"
+    },
+    "DropDown - Touch UI Dialog": {
+        "prefix": ["aem.dlg.touch.dropdown", "adcdd"],
+        "body": [
+            "<${1:nodeName}",
+                "\tjcr:primaryType=\"nt:unstructured\"",
+                "\tsling:resourceType=\"granite/ui/components/coral/foundation/form/select\"",
+                "\tfieldLabel=\"${2:Drop Down Label}\"",
+                "\tname=\"./${1:nodeName}\">",
+                "\t<items",
+                    "\t\tjcr:primaryType=\"nt:unstructured\">",
+                    "\t\t<selectOption",
+                        "\t\t\tjcr:primaryType=\"nt:unstructured\"",
+                        "\t\t\ttext=\"Select Items Below\"",
+                        "\t\t\tvalue=\"\"/>",
+                    "\t\t$0",
+                "\t</items>",
+            "</${1:nodeName}>"
+        ],
+        "description": "DropDown - Touch UI Dialog"
+    },
+    "DropDown Item - Touch UI Dialog": {
+        "prefix": ["aem.dlg.touch.dropdown.item", "adcddi"],
+        "body": [
+            "<${1:nodeName}",
+                "\tjcr:primaryType=\"nt:unstructured\"",
+                "\ttext=\"${2:Option Label}\"",
+                "\tvalue=\"${3:option-value}\"/>"
+        ],
+        "description": "DropDown Item - Touch UI Dialog"
     }
 }
