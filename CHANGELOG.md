@@ -11,6 +11,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Sling jobs, workflows, unit tests
 
+
+## [0.8.0] - 2020-03-23
+### Changed
+- Snippet description for json snippets that were wrong
+- Snippet prefix for clientlibs given that all were the same
+- Added the existing list of snippets to the README.md file
+
 ## [0.7.0] - 2020-03-01
 ### Added
 

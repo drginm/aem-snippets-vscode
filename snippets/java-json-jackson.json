@@ -1,12 +1,12 @@
 {
-    "OSGi Configuration R6 Use Configuration Imports": {
+    "Jackson - JSON - Imports": {
         "prefix": ["json.jackson.imports", "jji"],
         "body": [
             "import com.fasterxml.jackson.databind.ObjectMapper;",
             "import com.fasterxml.jackson.databind.node.ArrayNode;",
             "import com.fasterxml.jackson.databind.node.ObjectNode;"
         ],
-        "description": "OSGi Configuration R6 Use Configuration Imports"
+        "description": "Jackson - JSON - Imports"
     },
     "Create Jackson Object Mapper": {
         "prefix": ["json.jackson.mapper", "jjmap"],

@@ -118,14 +118,14 @@
         "description": "Include Js and CSS - Clientlibs - HTL"
     },
     "Include Js - Clientlibs - HTL": {
-        "prefix": ["htl.elem.clientlib.include.all", "hecia"],
+        "prefix": ["htl.elem.clientlib.include.js", "hecij"],
         "body": [
             "<meta data-sly-call=\"${clientLib.js @ categories='${1:your.clientlib}'}\" data-sly-unwrap></meta>"
         ],
         "description": "Include Js - Clientlibs - HTL"
     },
     "Include CSS - Clientlibs - HTL": {
-        "prefix": ["htl.elem.clientlib.include.all", "hecia"],
+        "prefix": ["htl.elem.clientlib.include.css", "hecic"],
         "body": [
             "<meta data-sly-call=\"${clientLib.css @ categories='${1:your.clientlib}'}\" data-sly-unwrap></meta>"
         ],

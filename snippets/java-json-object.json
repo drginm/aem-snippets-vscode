@@ -1,5 +1,5 @@
 {
-    "OSGi Configuration R6 Use Configuration Imports": {
+    "Commons - JSON - Imports": {
         "prefix": ["json.commons.imports", "jci"],
         "body": [
             "import org.apache.sling.commons.json.JSONArray;",
@@ -7,7 +7,7 @@
             "import org.apache.sling.commons.json.JSONObject;",
             "import org.apache.sling.commons.json.io.JSONRenderer;"
         ],
-        "description": "OSGi Configuration R6 Use Configuration Imports"
+        "description": "Commons - JSON - Imports"
     },
     "Create New Json Object": {
         "prefix": ["json.commons.new.object", "jcno"],
