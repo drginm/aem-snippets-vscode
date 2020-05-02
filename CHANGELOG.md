@@ -11,6 +11,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Sling jobs, workflows, unit tests
 
+## [0.9.0] - 2020-05-02
+### Added
+- JSP snippets
+- Classic UI Dialog snippets
+
+### Changed
+- Snippet description and prefixes for htl and touch ui snippets that were wrong
+- Fixed some Touch UI snippets that were closed at the wrong places
 
 ## [0.8.0] - 2020-03-23
 ### Changed

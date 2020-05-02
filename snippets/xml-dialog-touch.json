@@ -43,7 +43,7 @@
         "description": "Checkbox - Touch UI Dialog"
     },
     "Textfield - Touch UI Dialog": {
-        "prefix": ["aem.dlg.touch.textfield", "adctf"],
+        "prefix": ["aem.dlg.touch.textfield", "adttf"],
         "body": [
             "<${1:nodeName}",
                 "\tjcr:primaryType=\"nt:unstructured\"",
@@ -55,34 +55,34 @@
         "description": "Textfield - Touch UI Dialog"
     },
     "Textarea - Touch UI Dialog": {
-        "prefix": ["aem.dlg.touch.textarea", "adcta"],
+        "prefix": ["aem.dlg.touch.textarea", "adtta"],
         "body": [
             "<${1:nodeName}",
                 "\tjcr:primaryType=\"nt:unstructured\"",
                 "\tsling:resourceType=\"granite/ui/components/coral/foundation/form/textarea\"",
                 "\tfieldLabel=\"${2:Textarea Label}\"",
                 "\tname=\"./${1:nodeName}\"",
-                "\tfieldName=\"./${1:nodeName}\"/>",
+                "\tfieldName=\"./${1:nodeName}\"",
                 "\trows=\"10\"",
-                "\tresize=\"vertical\""
+                "\tresize=\"vertical\"/>"
         ],
         "description": "Textarea - Touch UI Dialog"
     },
     "Pathfield - Touch UI Dialog": {
-        "prefix": ["aem.dlg.touch.pathfield", "adcpf"],
+        "prefix": ["aem.dlg.touch.pathfield", "adtpf"],
         "body": [
             "<${1:nodeName}",
                 "\tjcr:primaryType=\"nt:unstructured\"",
                 "\tsling:resourceType=\"granite/ui/components/coral/foundation/form/textarea\"",
                 "\tfieldLabel=\"${2:Pathfield Label}\"",
                 "\tname=\"./${1:nodeName}\"",
-                "\tfieldName=\"./${1:nodeName}\"/>",
-                "\trootPath=\"/content\""
+                "\tfieldName=\"./${1:nodeName}\"",
+                "\trootPath=\"/content\"/>"
         ],
         "description": "Pathfield - Touch UI Dialog"
     },
     "Image - Touch UI Dialog": {
-        "prefix": ["aem.dlg.touch.pathfield", "adcpf"],
+        "prefix": ["aem.dlg.touch.image", "adti"],
         "body": [
             "<${1:elementName}",
                 "\tjcr:primaryType=\"nt:unstructured\"",
@@ -101,7 +101,7 @@
         "description": "Image - Touch UI Dialog"
     },
     "DropDown - Touch UI Dialog": {
-        "prefix": ["aem.dlg.touch.dropdown", "adcdd"],
+        "prefix": ["aem.dlg.touch.dropdown", "adtdd"],
         "body": [
             "<${1:nodeName}",
                 "\tjcr:primaryType=\"nt:unstructured\"",
@@ -121,7 +121,7 @@
         "description": "DropDown - Touch UI Dialog"
     },
     "DropDown Item - Touch UI Dialog": {
-        "prefix": ["aem.dlg.touch.dropdown.item", "adcddi"],
+        "prefix": ["aem.dlg.touch.dropdown.item", "adtddi"],
         "body": [
             "<${1:nodeName}",
                 "\tjcr:primaryType=\"nt:unstructured\"",

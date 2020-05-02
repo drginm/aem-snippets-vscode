@@ -1,0 +1,77 @@
+{
+    "JSP Comments": {
+        "prefix": ["jsp.elem.comments", "jeco"],
+        "body": [
+            "<%--",
+                "\t$1",
+            "--%>$0"
+        ],
+        "description": "JSP Comments"
+    },
+    "Include Global Objects": {
+        "prefix": ["jsp.elem.inc.globalobjects", "jeigo"],
+        "body": [
+            "<%@include file=\"/libs/foundation/global.jsp\"%>$0"
+        ],
+        "description": "Include Global Objects"
+    },
+    "JSP If conditional Element": {
+        "prefix": ["jsp.elem.if", "jeif"],
+        "body": [
+            "<c:if test=\"${1:\\${condition\\}}\">",
+                "\t$2",
+            "</c:if>"
+        ],
+        "description": "Get OSGi Bundle Version Imports"
+    },
+    "JSP choose conditional Element": {
+        "prefix": ["jsp.elem.choose", "jecho"],
+        "body": [
+            "<c:choose>",
+                "\t<c:when test=\"${1:\\${condition\\}}\">",
+                    "\t\t$2",
+                "\t</c:when>",
+                "\t<c:otherwise>",
+                    "\t\t$3",
+                "\t</c:otherwise>",
+            "</c:choose>"
+        ],
+        "description": "JSP choose conditional Element"
+    },
+    "JSP When - choose conditional Element": {
+        "prefix": ["jsp.elem.choose.when", "jechow"],
+        "body": [
+            "<c:when test=\"${1:\\${condition\\}}\">",
+                "\t$2",
+            "</c:when>"
+        ],
+        "description": "JSP When - choose conditional Element"
+    },
+    "JSP Otherwise - choose conditional Element": {
+        "prefix": ["jsp.elem.choose.otherwise", "jechot"],
+        "body": [
+            "<c:otherwise>",
+                "\t$1",
+            "</c:otherwise>"
+        ],
+        "description": "JSP Otherwise - choose conditional Element"
+    },
+    "JSP For Element": {
+        "prefix": ["jsp.elem.for", "jefor"],
+        "body": [
+            "<c:forEach var=\"${1:i}\" begin=\"${2:1}\" end=\"${3:5}\">",
+                "\t\\${$1}",
+            "</c:forEach>"
+        ],
+        "description": "JSP For Element"
+    },
+    "JSP Foreach Element": {
+        "prefix": ["jsp.elem.foreach", "jeforeach"],
+        "body": [
+            "<c:forEach items=\"${1:\\${list\\}}\" var=\"${2:item}\">",
+                "\t\\${$2}",
+            "</c:forEach>"
+        ],
+        "description": "JSP Foreach Element"
+    }
+}

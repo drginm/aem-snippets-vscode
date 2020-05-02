@@ -1,16 +1,16 @@
 # aem-snippets-vscode README
 
-This is a VSCode extension with AEM application snippets for HTML, Touch UI dialogs, osgi configs and sling servlets (for now)
+This is a VSCode extension with AEM application HTL and JSP snippets for HTML, Touch and Classic UI dialogs, osgi configs and sling servlets (for now)
 
 ## Features
 
 For now simple htl snippets, some snippets for touch ui dialogs, sling servlets, osgi configurations and json object creation
 
-* Type 'htl.' to see available snippets inside a .html file
+* Type 'htl.' or 'jsp.' to see available snippets inside a .html file
 * Type 'aem.' or 'osgi.' to see available snippets inside a .xml or .js file
 * Type 'sling.' or 'osgi.' to see available snippets inside a .java file
 
-There are two ways of triggering the snippet, one is very verbose, sorry for that, but it was created for me or someone like me :( that might forget some stuff, and some are shorter for those with big memories (obviousaly not me)
+There are two ways of triggering the snippet, one is very verbose, sorry for that, but it was created for me or someone like me :( that might forget some stuff, and some are shorter for those with big memories (obviously not me)
 
 ### HTML - snippets (*.html files)
 
@@ -117,12 +117,12 @@ There are two ways of triggering the snippet, one is very verbose, sorry for tha
 | ------------- |:-------------|:-----|
 | Dialog Node - Touch UI Dialog      | adtd | aem.dlg.touch.dialog |
 | Checkbox - Touch UI Dialog      | adtch | aem.dlg.touch.checkbox |
-| Textfield - Touch UI Dialog      | adctf | aem.dlg.touch.textfield |
-| Textarea - Touch UI Dialog      | adcta | aem.dlg.touch.textarea |
-| Pathfield - Touch UI Dialog      | adcpf | aem.dlg.touch.pathfield |
-| Image - Touch UI Dialog      | adcpf | aem.dlg.touch.pathfield |
-| DropDown - Touch UI Dialog      | adcdd | aem.dlg.touch.dropdown |
-| DropDown Item - Touch UI Dialog      | adcddi | aem.dlg.touch.dropdown.item |
+| Textfield - Touch UI Dialog      | adttf | aem.dlg.touch.textfield |
+| Textarea - Touch UI Dialog      | adtta | aem.dlg.touch.textarea |
+| Pathfield - Touch UI Dialog      | adtpf | aem.dlg.touch.pathfield |
+| Image - Touch UI Dialog      | adti | aem.dlg.touch.image |
+| DropDown - Touch UI Dialog      | adtdd | aem.dlg.touch.dropdown |
+| DropDown Item - Touch UI Dialog      | adtddi | aem.dlg.touch.dropdown.item |
 
 ### OSGi configuration - snippets (*.xml files)
 
@@ -131,12 +131,42 @@ There are two ways of triggering the snippet, one is very verbose, sorry for tha
 | OSGi config header      | ocxh | osgi.config.xml.header |
 | Feature Toggles - OSGi config      | ocxff | osgi.config.xml.featureFlag |
 
+### Classic UI - Dialogs - snippets (*.xml files)
+
+| Description        | Short Alias           | Verbose in case you forget |
+| ------------- |:-------------|:-----|
+| Dialog Node - Classic UI Dialog      | adcd | aem.dlg.classic.dialog |
+| Checkbox - Classic UI Dialog      | adcch | aem.dlg.classic.checkbox |
+| Textfield - Classic UI Dialog      | adctf | aem.dlg.classic.textfield |
+| Textarea - Classic UI Dialog      | adcta | aem.dlg.classic.textarea |
+| Pathfield - Classic UI Dialog      | adcpf | aem.dlg.classic.pathfield |
+| DropDown - Classic UI Dialog      | adcdd | aem.dlg.classic.dropdown |
+| DropDown Item - Classic UI Dialog      | adcddi | aem.dlg.classic.dropdown.item |
+| Include Fragment - Classic UI Dialog      | adcif | aem.dlg.classic.includefragment |
+
+### JSP - snippets (*.html files)
+
+| Description        | Short Alias           | Verbose in case you forget |
+| ------------- |:-------------|:-----|
+| JSP Comments      | jeco | jsp.elem.comments |
+| Include Global Objects      | jeigo | jsp.elem.inc.globalobjects |
+| Get OSGi Bundle Version Imports      | jeif | jsp.elem.if |
+| JSP choose conditional Element      | jecho | jsp.elem.choose |
+| JSP When - choose conditional Element      | jechow | jsp.elem.choose.when |
+| JSP Otherwise - choose conditional Element      | jechot | jsp.elem.choose.otherwise |
+| JSP For Element      | jefor | jsp.elem.for |
+| JSP Foreach Element      | jeforeach | jsp.elem.foreach |
+
 
 ## Known Issues
 
 NONE for now :D
 
 ## Release Notes
+
+## 0.9.0
+
+Fixed prefix and descriptions for a couple of the touch and htl snippets and also added snippets for Classic UI dialogs and jsp files
 
 ## 0.8.0
 

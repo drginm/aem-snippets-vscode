@@ -1,2 +1,114 @@
 {
+    "Dialog Node - Classic UI Dialog": {
+        "prefix": ["aem.dlg.classic.dialog", "adcd"],
+        "body": [
+            "<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
+            "<jcr:root xmlns:cq=\"http://www.day.com/jcr/cq/1.0\" xmlns:jcr=\"http://www.jcp.org/jcr/1.0\"",
+                "\tjcr:primaryType=\"cq:Dialog\"",
+                "\ttitle=\"${1:Properties}\"",
+                "\txtype=\"dialog\">",
+                "\t<items jcr:primaryType=\"cq:WidgetCollection\">",
+                    "\t\t$0",
+                "\t</items>",
+            "</jcr:root>"
+        ],
+        "description": "Dialog Node - Classic UI Dialog"
+    },
+    "Checkbox - Classic UI Dialog": {
+        "prefix": ["aem.dlg.classic.checkbox", "adcch"],
+        "body": [
+            "<${1:nodeName}",
+                "\tjcr:primaryType=\"cq:Widget\"",
+                "\tfieldLabel=\"${2:Text Label}\"",
+                "\tname=\"./$1\"",
+                "\tfieldName=\"./$1\"",
+                "\ttype=\"checkbox\"",
+                "\txtype=\"selection\"/>",
+            "<$1TypeHint",
+                "\tjcr:primaryType=\"cq:Widget\"",
+                "\tignoreData=\"{Boolean}true\"",
+                "\tname=\"./$1@TypeHint\"",
+                "\tvalue=\"Boolean\"",
+                "\txtype=\"hidden\"/>"
+        ],
+        "description": "Checkbox - Classic UI Dialog"
+    },
+    "Textfield - Classic UI Dialog": {
+        "prefix": ["aem.dlg.classic.textfield", "adctf"],
+        "body": [
+            "<${1:nodeName}",
+                "\tjcr:primaryType=\"cq:Widget\"",
+                "\tfieldLabel=\"${2:Field Label}\"",
+                "\tname=\"./$1\"",
+                "\tfieldName=\"./$1\"",
+                "\txtype=\"textfield\"/>"
+        ],
+        "description": "Textfield - Classic UI Dialog"
+    },
+    "Textarea - Classic UI Dialog": {
+        "prefix": ["aem.dlg.classic.textarea", "adcta"],
+        "body": [
+            "<${1:nodeName}",
+                "\tjcr:primaryType=\"cq:Widget\"",
+                "\tfieldLabel=\"${2:Field Label}\"",
+                "\tname=\"./$1\"",
+                "\tfieldName=\"./$1\"",
+                "\txtype=\"textarea\"/>"
+        ],
+        "description": "Textarea - Classic UI Dialog"
+    },
+    "Pathfield - Classic UI Dialog": {
+        "prefix": ["aem.dlg.classic.pathfield", "adcpf"],
+        "body": [
+            "<${1:nodeName}",
+                "\tjcr:primaryType=\"cq:Widget\"",
+                "\tfieldLabel=\"${2:Field Label}\"",
+                "\tname=\"./$1\"",
+                "\tfieldName=\"./$1\"",
+                "\trootPath=\"/content\"",
+                "\txtype=\"pathfield\"/>"
+        ],
+        "description": "Pathfield - Classic UI Dialog"
+    },
+    "DropDown - Classic UI Dialog": {
+        "prefix": ["aem.dlg.classic.dropdown", "adcdd"],
+        "body": [
+            "<${1:nodeName}",
+                "\tjcr:primaryType=\"cq:Widget\"",
+                "\tfieldLabel=\"${2:Drop Down Label}\"",
+                "\tname=\"./${1:nodeName}\"",
+                "\ttype=\"select\"",
+                "\txtype=\"selection\">",
+                "\t<options",
+                    "\t\tjcr:primaryType=\"cq:WidgetCollection\">",
+                    "\t\t<selectOption",
+                        "\t\t\tjcr:primaryType=\"nt:unstructured\"",
+                        "\t\t\ttext=\"Select Items Below\"",
+                        "\t\t\tvalue=\"\"/>",
+                    "\t\t$0",
+                "\t</options>",
+            "</${1:nodeName}>"
+        ],
+        "description": "DropDown - Classic UI Dialog"
+    },
+    "DropDown Item - Classic UI Dialog": {
+        "prefix": ["aem.dlg.classic.dropdown.item", "adcddi"],
+        "body": [
+            "<${1:nodeName}",
+                "\tjcr:primaryType=\"nt:unstructured\"",
+                "\ttext=\"${2:Option Label}\"",
+                "\tvalue=\"${3:option-value}\"/>"
+        ],
+        "description": "DropDown Item - Classic UI Dialog"
+    },
+    "Include Fragment - Classic UI Dialog": {
+        "prefix": ["aem.dlg.classic.includefragment", "adcif"],
+        "body": [
+            "<${1:nodeName}",
+                "\tjcr:primaryType=\"cq:Widget\"",
+                "\tpath=\"${2:path/to/dialog/fragment}.infinity.json\"",
+                "\txtype=\"cqinclude\"/>"
+        ],
+        "description": "Include Fragment - Classic UI Dialog"
+    }
 }
