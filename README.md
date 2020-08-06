@@ -164,6 +164,10 @@ NONE for now :D
 
 ## Release Notes
 
+## 0.10.0
+
+JSP snippets for XSS protection, XML configurations for feature toggles and log files
+
 ## 0.9.0
 
 Fixed prefix and descriptions for a couple of the touch and htl snippets and also added snippets for Classic UI dialogs and jsp files

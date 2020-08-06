@@ -11,6 +11,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Sling jobs, workflows, unit tests
 
+## [0.10.0] - 2020-08-06
+### Added
+- JSP snippets for XSS protection
+- XML configurations for feature toggles and log files
+
 ## [0.9.0] - 2020-05-02
 ### Added
 - JSP snippets

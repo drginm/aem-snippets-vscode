@@ -19,6 +19,19 @@
                 "\tdescription=\"${2:this is Some Feature}\"",
                 "\tenabled=\"{Boolean}${3|true,false|}\"/>"
         ],
-        "description": "Feature Toggles - OSGi config"
+        "description": "Feature Toggles - OSGi config for a file named org.apache.sling.featureflags.impl.ConfiguredFeature-someFeature.xml"
+    },
+    "Log - OSGi config": {
+        "prefix": ["osgi.config.xml.featureFlag", "ocxff"],
+        "body": [
+            "<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
+            "<jcr:root xmlns:sling=\"http://sling.apache.org/jcr/sling/1.0\"",
+                "\txmlns:jcr=\"http://www.jcp.org/jcr/1.0\" jcr:primaryType=\"sling:OsgiConfig\"",
+                "\torg.apache.sling.commons.log.file=\"${1:logs/project-we-retail.log}\"",
+                "\torg.apache.sling.commons.log.level=\"${1:info}\"",
+                "\torg.apache.sling.commons.log.names=\"[${1:package}]\"",
+                "\torg.apache.sling.commons.log.pattern=\"\\{0,date,yyyy-MM-dd HH:mm:ss.SSS} {4} [{3}] {5}\"/>"
+        ],
+        "description": "Log - OSGi config for a file named org.apache.sling.commons.log.LogManager.factory.config-logname.xml"
     }
 }
