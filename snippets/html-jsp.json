@@ -91,56 +91,56 @@
     "XSS Encode for HTML": {
         "prefix": ["jsp.expression.xss.encodeFor.html", "jexeh"],
         "body": [
-            "\\${xss:encodeForHTML(XSSAPI, ${1:valueToEncode})}"
+            "\\${xss:encodeForHTML(xssAPI, ${1:valueToEncode})}"
         ],
         "description": "XSS Encode for HTML"
     },
     "XSS Encode for HTML Attribute": {
         "prefix": ["jsp.expression.xss.encodeFor.htmlattribute", "jexea"],
         "body": [
-            "\\${xss:encodeForHTMLAttr(XSSAPI, ${1:valueToEncode})}"
+            "\\${xss:encodeForHTMLAttr(xssAPI, ${1:valueToEncode})}"
         ],
         "description": "XSS Encode for HTML Attribute"
     },
     "XSS Encode for HTML JS String": {
         "prefix": ["jsp.expression.xss.encodeFor.jsstring", "jexjs"],
         "body": [
-            "\\${xss:encodeForJSString(XSSAPI, ${1:valueToEncode})}"
+            "\\${xss:encodeForJSString(xssAPI, ${1:valueToEncode})}"
         ],
         "description": "XSS Encode for HTML JS String"
     },
     "XSS Valid HTML": {
         "prefix": ["jsp.expression.xss.valid.html", "jexvh"],
         "body": [
-            "\\${xss:filterHTML(XSSAPI, ${1:valueToEncode})}"
+            "\\${xss:filterHTML(xssAPI, ${1:valueToEncode})}"
         ],
         "description": "XSS Valid HTML"
     },
     "XSS Valid Dimension": {
         "prefix": ["jsp.expression.xss.valid.dim", "jexdim"],
         "body": [
-            "\\${xss:getValidDimension(XSSAPI, ${1:valueToEncode})}"
+            "\\${xss:getValidDimension(xssAPI, ${1:valueToEncode})}"
         ],
         "description": "XSS Valid Dimension"
     },
     "XSS Valid Valid Href": {
         "prefix": ["jsp.expression.xss.valid.href", "jexhref"],
         "body": [
-            "\\${xss:getValidHref(XSSAPI, ${1:valueToEncode})}"
+            "\\${xss:getValidHref(xssAPI, ${1:valueToEncode})}"
         ],
         "description": "XSS Valid Valid Href"
     },
     "XSS Valid Integer": {
         "prefix": ["jsp.expression.xss.valid.int", "jexint"],
         "body": [
-            "\\${xss:getValidInteger(XSSAPI, ${1:valueToEncode})}"
+            "\\${xss:getValidInteger(xssAPI, ${1:valueToEncode})}"
         ],
         "description": "XSS Valid Integer"
     },
     "XSS Valid JS Token": {
         "prefix": ["jsp.expression.xss.valid.token", "jextoken"],
         "body": [
-            "\\${xss:getValidJSToken(XSSAPI, ${1:valueToEncode})}"
+            "\\${xss:getValidJSToken(xssAPI, ${1:valueToEncode})}"
         ],
         "description": "XSS Valid JS Token"
     }
