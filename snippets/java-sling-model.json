@@ -36,5 +36,57 @@
             "}"
         ],
         "description": "Model Definition - Exporter - Sling Model"
+    },
+    "Simple Example - Sling Model": {
+        "prefix": ["sling.model.example.simple", "smexs"],
+        "body": [
+            "package ${2:com.company.aem.core.models};",
+            "",
+            "import javax.annotation.PostConstruct;",
+            "",
+            "import org.apache.sling.api.resource.Resource;",
+            "import org.apache.sling.models.annotations.Model;",
+            "import org.apache.sling.models.annotations.injectorspecific.InjectionStrategy;",
+            "import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;",
+            "",
+            "",
+            "@Model(adaptables = Resource.class)",
+            "public class ${1:${TM_FILENAME_BASE}} {",
+                "\t$0",
+            "}"
+        ],
+        "description": "Simple Example - Sling Model"
+    },
+    "Exporter Example - Sling Model": {
+        "prefix": ["sling.model.example.simple", "smexe"],
+        "body": [
+            "package ${2:com.company.aem.core.models};",
+            "",
+            "import javax.annotation.PostConstruct;",
+            "",
+            "import org.apache.sling.api.SlingHttpServletRequest;",
+            "import com.adobe.cq.export.json.ComponentExporter;",
+            "import org.apache.sling.models.annotations.Exporter;",
+            "import com.adobe.cq.export.json.ExporterConstants;",
+            "import org.apache.sling.models.annotations.Model;",
+            "import org.apache.sling.models.annotations.injectorspecific.InjectionStrategy;",
+            "import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;",
+            "",
+            "",
+            "@Model(adaptables = SlingHttpServletRequest.class,",
+                    "\t\tadapters = {ComponentExporter.class},",
+                    "\t\tresourceType = ${1:${TM_FILENAME_BASE}}.RESOURCE_TYPE)",
+            "@Exporter(name = ExporterConstants.SLING_MODEL_EXPORTER_NAME, extensions = ExporterConstants.SLING_MODEL_EXTENSION)",
+            "public class $1 implements ComponentExporter {",
+                "\tprotected static final String RESOURCE_TYPE = \"${2:\"my-app/components/my-component\"}\";",
+                "",
+                "\t$0",
+                "",
+                "\tpublic String getExportedType() {",
+                    "\t\treturn RESOURCE_TYPE;",
+                "\t}",
+            "}"
+        ],
+        "description": "Exporter Example - Sling Model"
     }
 }

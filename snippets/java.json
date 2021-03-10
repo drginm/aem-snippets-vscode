@@ -1,0 +1,26 @@
+{
+    "Simple Class - Java": {
+        "prefix": ["java.example.simpleInterface", "jexsi"],
+        "body": [
+            "package ${2:com.company.aem.core.models};",
+            "",
+            "",
+            "public interface ${1:${TM_FILENAME_BASE}} {",
+                "\t$0",
+            "}"
+        ],
+        "description": "Simple Class - Java"
+    },
+    "Simple Interface - Java": {
+        "prefix": ["java.example.simpleClass", "jexsc"],
+        "body": [
+            "package ${2:com.company.aem.core.models};",
+            "",
+            "",
+            "public class ${1:${TM_FILENAME_BASE}} {",
+                "\t$0",
+            "}"
+        ],
+        "description": "Simple Interface - Java"
+    }
+}

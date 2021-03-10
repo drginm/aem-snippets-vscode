@@ -129,5 +129,25 @@
                 "\tvalue=\"${3:option-value}\"/>"
         ],
         "description": "DropDown Item - Touch UI Dialog"
+    },
+    "Multifield - Touch UI Dialog": {
+        "prefix": ["aem.dlg.touch.multifield", "adtmf"],
+        "body": [
+            "<${1:nodeName}",
+                "\tjcr:primaryType=\"nt:unstructured\"",
+                "\tsling:resourceType=\"granite/ui/components/foundation/form/multifield\"",
+                "\tfieldLabel=\"${2:Multifield Label}\">",
+                "\t<fields",
+                    "\t\tjcr:primaryType=\"nt:unstructured\"",
+                    "\t\tsling:resourceType=\"granite/ui/components/coral/foundation/container\"",
+                    "\t\trequired=\"true\"",
+                    "\t\tname=\"./$1\">",
+                    "\t\t<items jcr:primaryType=\"nt:unstructured\">",
+                        "\t\t\t$0",
+                    "\t\t</items>",
+                "\t</fields>",
+            "</${1:nodeName}>"
+        ],
+        "description": "Multifield - Touch UI Dialog"
     }
 }

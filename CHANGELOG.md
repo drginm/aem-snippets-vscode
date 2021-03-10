@@ -11,6 +11,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Sling jobs, workflows, unit tests
 
+## [0.11.0] - 2021-03-09
+### Added
+- Example for Sling models with and without the exporter
+- Touch Dialog multifield
+- Simple Java Class and Interface example
+
 ## [0.10.0] - 2020-08-06
 ### Added
 - JSP snippets for XSS protection
