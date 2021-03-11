@@ -40,18 +40,18 @@
     "Simple Example - Sling Model": {
         "prefix": ["sling.model.example.simple", "smexs"],
         "body": [
-            "package ${2:com.company.aem.core.models};",
+            "package ${1:com.company.aem.core.models};",
             "",
             "import javax.annotation.PostConstruct;",
             "",
-            "import org.apache.sling.api.resource.Resource;",
+            "import org.apache.sling.api.${2|resource.Resource,SlingHttpServletRequest|};",
             "import org.apache.sling.models.annotations.Model;",
             "import org.apache.sling.models.annotations.injectorspecific.InjectionStrategy;",
             "import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;",
             "",
             "",
-            "@Model(adaptables = Resource.class)",
-            "public class ${1:${TM_FILENAME_BASE}} {",
+            "@Model(adaptables = ${3|Resource,SlingHttpServletRequest|}.class)",
+            "public class ${4:${TM_FILENAME_BASE}} {",
                 "\t$0",
             "}"
         ],
@@ -60,7 +60,7 @@
     "Exporter Example - Sling Model": {
         "prefix": ["sling.model.example.simple", "smexe"],
         "body": [
-            "package ${2:com.company.aem.core.models};",
+            "package ${1:com.company.aem.core.models};",
             "",
             "import javax.annotation.PostConstruct;",
             "",
@@ -75,10 +75,10 @@
             "",
             "@Model(adaptables = SlingHttpServletRequest.class,",
                     "\t\tadapters = {ComponentExporter.class},",
-                    "\t\tresourceType = ${1:${TM_FILENAME_BASE}}.RESOURCE_TYPE)",
+                    "\t\tresourceType = ${2:${TM_FILENAME_BASE}}.RESOURCE_TYPE)",
             "@Exporter(name = ExporterConstants.SLING_MODEL_EXPORTER_NAME, extensions = ExporterConstants.SLING_MODEL_EXTENSION)",
-            "public class $1 implements ComponentExporter {",
-                "\tprotected static final String RESOURCE_TYPE = \"${2:\"my-app/components/my-component\"}\";",
+            "public class $2 implements ComponentExporter {",
+                "\tprotected static final String RESOURCE_TYPE = \"${3:\"my-app/components/my-component\"}\";",
                 "",
                 "\t$0",
                 "",
@@ -88,5 +88,72 @@
             "}"
         ],
         "description": "Exporter Example - Sling Model"
+    },
+    "Simple Interface - Sling Model": {
+        "prefix": ["sling.model.example.simpleInterface", "smexi"],
+        "body": [
+            "package ${1:com.company.aem.core.models};",
+            "",
+            "import org.osgi.annotation.versioning.ConsumerType;",
+            "",
+            "",
+            "@ConsumerType",
+            "public class ${2:${TM_FILENAME_BASE}} {",
+                "\t$0",
+            "}"
+        ],
+        "description": "Simple Interface - Sling Model"
+    },
+    "Child Resource - Inject - Sling Model": {
+        "prefix": ["sling.model.inject.childresource", "smeicr"],
+        "body": [
+            "@ChildResource(${1:name=\"No resourceType\", }${2:injectionStrategy=InjectionStrategy.OPTIONAL, })",
+            "${3|private,protected,public|} ${4:String} ${5:propertyName};"
+        ],
+        "description": "Child Resource - Inject - Sling Model"
+    },
+    "Value Map Value - Inject - Sling Model": {
+        "prefix": ["sling.model.inject.valueMapValue", "smeivm"],
+        "body": [
+            "@ValueMapValue(${1:name=\"No resourceType\", }${2:injectionStrategy=InjectionStrategy.OPTIONAL, })",
+            "${3|private,protected,public|} ${4:String} ${5:propertyName};"
+        ],
+        "description": "Value Map Value - Inject - Sling Model"
+    },
+    "Sling Object - Inject - Sling Model": {
+        "prefix": ["sling.model.inject.slingObject", "smeiso"],
+        "body": [
+            "@SlingObject",
+            "${3|private,protected,public|} ${4:Resource} ${5:propertyName};"
+        ],
+        "description": "Sling Object - Inject - Sling Model"
+    },
+    "OSGi Service - Inject - Sling Model": {
+        "prefix": ["sling.model.inject.osgiService", "smeios"],
+        "body": [
+            "@OSGiService",
+            "${3|private,protected,public|} ${4:SomeOSGiService} ${5:propertyName};"
+        ],
+        "description": "OSGi Service - Inject - Sling Model"
+    },
+    "Default - Inject - Sling Model": {
+        "prefix": ["sling.model.inject.default", "smeid"],
+        "body": [
+            "@Default(values=${1|\"Default Value\",true,0|})",
+            "${3|private,protected,public|} ${4:SomeOSGiService} ${5:propertyName};"
+        ],
+        "description": "Default - Inject - Sling Model"
+    },
+    "Post Construct - Sling Model": {
+        "prefix": ["sling.model.postConstruct", "smepc"],
+        "body": [
+            "@PostConstruct",
+            "protected void ${1:init}() {",
+                "\t$0",
+            "}"
+        ],
+        "description": "Post Construct - Sling Model"
     }
 }
+
+

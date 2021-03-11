@@ -130,14 +130,15 @@
         ],
         "description": "DropDown Item - Touch UI Dialog"
     },
-    "Multifield - Touch UI Dialog": {
-        "prefix": ["aem.dlg.touch.multifield", "adtmf"],
+    "Multifield Multiple Fields - Touch UI Dialog": {
+        "prefix": ["aem.dlg.touch.multifield.multiple", "adtmmf"],
         "body": [
             "<${1:nodeName}",
                 "\tjcr:primaryType=\"nt:unstructured\"",
                 "\tsling:resourceType=\"granite/ui/components/foundation/form/multifield\"",
+                "\tcomposite=\"{Boolean}true\"",
                 "\tfieldLabel=\"${2:Multifield Label}\">",
-                "\t<fields",
+                "\t<field",
                     "\t\tjcr:primaryType=\"nt:unstructured\"",
                     "\t\tsling:resourceType=\"granite/ui/components/coral/foundation/container\"",
                     "\t\trequired=\"true\"",
@@ -145,9 +146,25 @@
                     "\t\t<items jcr:primaryType=\"nt:unstructured\">",
                         "\t\t\t$0",
                     "\t\t</items>",
-                "\t</fields>",
+                "\t</field>",
             "</${1:nodeName}>"
         ],
-        "description": "Multifield - Touch UI Dialog"
+        "description": "Multifield Multiple Fields - Touch UI Dialog"
+    },
+    "Multifield Single Field - Touch UI Dialog": {
+        "prefix": ["aem.dlg.touch.multifield.single", "adtmsf"],
+        "body": [
+            "<${1:nodeName}",
+                "\tjcr:primaryType=\"nt:unstructured\"",
+                "\tsling:resourceType=\"granite/ui/components/foundation/form/multifield\"",
+                "\tfieldLabel=\"${2:Multifield Label}\">",
+                "\t<field",
+                    "\t\tjcr:primaryType=\"nt:unstructured\"",
+                    "\t\tsling:resourceType=\"${3:granite/ui/components/coral/foundation/form/textfield}\"",
+                    "\t\trequired=\"true\"",
+                    "\t\tname=\"./$1\"/>$0",
+            "</${1:nodeName}>"
+        ],
+        "description": "Multifield Single Field - Touch UI Dialog"
     }
 }

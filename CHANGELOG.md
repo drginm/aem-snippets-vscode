@@ -9,7 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-- Sling jobs, workflows, unit tests
+- Sling jobs, workflows
+
+## [0.12.0] - 2021-03-10
+### Added
+- Sling Model Unit tests
+- Touch Dialog multifield for single and multiple
 
 ## [0.11.0] - 2021-03-09
 ### Added

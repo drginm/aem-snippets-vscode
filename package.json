@@ -3,7 +3,7 @@
     "publisher": "ManuelDanielGutierrezMarin",
     "displayName": "AEM Snippets",
     "description": "Code snippets for AEM applications",
-    "version": "0.11.0",
+    "version": "0.12.0",
     "repository": {
         "type": "git",
         "url": "https://github.com/drginm/aem-snippets-vscode"
@@ -47,6 +47,10 @@
             },
             {
                 "language": "java",
+                "path": "./snippets/java-sling-model-junit.json"
+            },
+            {
+                "language": "java",
                 "path": "./snippets/java-sling-model.json"
             },
             {
@@ -56,6 +60,10 @@
             {
                 "language": "javascript",
                 "path": "./snippets/javascript-reactjs.json"
+            },
+            {
+                "language": "json",
+                "path": "./snippets/json-sling-model-junit.json"
             },
             {
                 "language": "xml",
