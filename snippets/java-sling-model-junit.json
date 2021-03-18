@@ -1,6 +1,6 @@
 {
     "Class - AEM Mocks - JUnit - Sling Model": {
-        "prefix": ["sling.model.junit.mocks.class", "smjumc"],
+        "prefix": ["model.junit.mocks.class", "mjumc"],
         "body": [
             "package ${1:com.company.aem.core.models};",
             "",
@@ -26,24 +26,24 @@
         "description": "Class - AEM Mocks - JUnit - Sling Model"
     },
     "BeforeEach - AEM Mocks - JUnit - Sling Model": {
-        "prefix": ["sling.model.junit.mocks.beforeEach", "smjumbe"],
+        "prefix": ["model.junit.mocks.beforeEach", "mjumbe"],
         "body": [
             "@BeforeEach",
             "public void ${1:setup}(AemContext context) throws Exception {",
-                "",
+                "\t$0",
             "}"
         ],
         "description": "BeforeEach - AEM Mocks - JUnit - Sling Model"
     },
     "Load Json - AEM Mocks - JUnit - Sling Model": {
-        "prefix": ["sling.model.junit.mocks.loadJson", "smjumlj"],
+        "prefix": ["model.junit.mocks.loadJson", "mjumlj"],
         "body": [
             "context.load().json(\"${1:/com/mysite/core/models/MyTest.json}\", \"${2:/content/myotherpage}\");"
         ],
         "description": "Load Json - AEM Mocks - JUnit - Sling Model"
     },
     "Create Resource - AEM Mocks - JUnit - Sling Model": {
-        "prefix": ["sling.model.junit.mocks.createResource", "smjumcr"],
+        "prefix": ["model.junit.mocks.createResource", "mjumcr"],
         "body": [
             "private Page page;",
             "private Resource resource;",
@@ -51,15 +51,15 @@
             "page = context.create().page(\"${1:/content/mypage}\");",
             "resource = context.create().resource(page, \"${2:nodeName}\", ImmutableMap.<String, Object>builder()",
                 "\t.put(\"sling:resourceType\", \"${3:\"my-app/components/my-component\"}\")",
-                "\t.put(\"${4:propertyName}\", \"${5:|\"propertyValue\",true,0|}\")",
+                "\t.put(\"${4:propertyName}\", \"${5|\"propertyValue\",true,0|}\")",
                 "\t.build());",
             "",
-            "${6:ComponentModel} ${7:variable} = resource.adaptTo($6.class);"
+            "${6:ComponentModel} ${7:model} = resource.adaptTo($6.class);"
         ],
         "description": "Create Resource - AEM Mocks - JUnit - Sling Model"
     },
     "Empty Test - AEM Mocks - JUnit - Sling Model": {
-        "prefix": ["sling.model.junit.mocks.test", "smjumet"],
+        "prefix": ["model.junit.mocks.test", "mjumet"],
         "body": [
             "@Test",
             "void ${1:testMethod}() throws Exception {",
@@ -69,16 +69,16 @@
         "description": "Empty Test - AEM Mocks - JUnit - Sling Model"
     },
     "Test with Json - AEM Mocks - JUnit - Sling Model": {
-        "prefix": ["sling.model.junit.mocks.class", "smjumtj"],
+        "prefix": ["model.junit.mocks.class", "mjumtj"],
         "body": [
             "@Test",
             "void ${1:testMethod}(AemContext context) throws Exception {",
                 "\tcontext.currentResource(\"${2:/content/myotherpage/nodeName}\");",
                 "",
-                "\t${3:ComponentModel} byline = context.${4:|request,currentResource|}().adaptTo($3.class);",
+                "\t${3:ComponentModel} ${4:model} = context.${5|request,currentResource|}().adaptTo($3.class);",
                 "\tfinal String expected = \"Something!\";",
                 "",
-                "\tString msg = byline.get${5:PropertyName}();",
+                "\tString msg = $4.get${5:PropertyName}();",
                 "\tassertNotNull(msg);",
                 "\tassertEquals(expected, msg);",
             "}"
@@ -86,7 +86,7 @@
         "description": "Test with Json - AEM Mocks - JUnit - Sling Model"
     },
     "Assert Contains - AEM Mocks - JUnit - Sling Model": {
-        "prefix": ["sling.model.junit.assert.contains", "smjuac"],
+        "prefix": ["model.junit.assert.contains", "mjuac"],
         "body": [
             "assertTrue(StringUtils.contains(${1:variableToCheck}, ${2:dataSource}));"
         ],

@@ -1,0 +1,31 @@
+{
+    "Component Imports - Angular - AEM": {
+        "prefix": ["aem.angular.component.imports", "aaci"],
+        "body": [
+            "import { MapTo } from '@adobe/aem-angular-editable-components';"
+        ],
+        "description": "Component Imports - Angular - AEM"
+	},
+    "Component EditConfig - Angular - AEM": {
+        "prefix": ["aem.angular.component.editConfig", "aacec"],
+        "body": [
+            "const $1EditConfig = {",
+                "\temptyLabel: '${2:Hello World}',",
+            "",
+                "\tisEmpty: cqModel =>",
+                    "\t!cqModel || !cqModel.${3:text};",
+            "};"
+        ],
+        "description": "Component EditConfig - Angular - AEM"
+	},
+    "Map to AEM Component - Angular - AEM": {
+        "prefix": ["aem.angular.component.mapTo", "aacm"],
+        "body": [
+            "MapTo('${2:my-app/components/hello-world}')(",
+                "\t${1:HelloWorld},",
+                "\t$1EditConfig",
+            ");"
+        ],
+        "description": "Map to AEM Component - Angular - AEM"
+	}
+}

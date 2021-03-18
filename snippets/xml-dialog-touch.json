@@ -166,5 +166,55 @@
             "</${1:nodeName}>"
         ],
         "description": "Multifield Single Field - Touch UI Dialog"
+    },
+    "Include Fields - Touch UI Dialog": {
+        "prefix": ["aem.dlg.touch.include", "adtinc"],
+        "body": [
+            "<${1:nodeName}",
+                "\tjcr:primaryType=\"nt:unstructured\"",
+                "\tsling:resourceType=\"granite/ui/components/foundation/include\"",
+                "\tpath=\"./${1:my-app/components/my-component}\"/>"
+        ],
+        "description": "Include Fields - Touch UI Dialog"
+    },
+    "Tabs Container - Touch UI Dialog": {
+        "prefix": ["aem.dlg.touch.tab.container", "adttc"],
+        "body": [
+            "<${1:tabs}",
+                "\tjcr:primaryType=\"nt:unstructured\"",
+                "\tsling:resourceType=\"granite/ui/components/coral/foundation/tabs\"",
+                "\tmaximized=\"{Boolean}true\">",
+                "\t<items jcr:primaryType=\"nt:unstructured\">",
+                    "\t\t$0",
+                "\t</items>",
+            "</$1>"
+        ],
+        "description": "Tabs Container - Touch UI Dialog"
+    },
+    "Tab Item - Touch UI Dialog": {
+        "prefix": ["aem.dlg.touch.tab.item", "adtti"],
+        "body": [
+            "<${1:firstTab}",
+                "\tjcr:primaryType=\"nt:unstructured\"",
+                "\tjcr:title=\"${2:First Tab Title}\"",
+                "\tsling:resourceType=\"granite/ui/components/coral/foundation/fixedcolumns\"",
+                "\tmargin=\"{Boolean}true\">",
+                "\t<items jcr:primaryType=\"nt:unstructured\">",
+                    "\t\t<column",
+                        "\t\t\tjcr:primaryType=\"nt:unstructured\"",
+                        "\t\t\tsling:resourceType=\"granite/ui/components/coral/foundation/container\">",
+                        "\t\t\t<items jcr:primaryType=\"nt:unstructured\">",
+                            "\t\t\t\t$0",
+                        "\t\t\t</items>",
+                    "\t\t</column>",
+                "\t</items>",
+            "</$1>"
+        ],
+        "description": "Tab Item - Touch UI Dialog"
     }
 }
+
+
+
+
+

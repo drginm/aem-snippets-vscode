@@ -1,12 +1,12 @@
 {
     "Json example - AEM Mocks - JUnit - Sling Model": {
-        "prefix": ["sling.model.junit.mocks.json", "smjumj"],
+        "prefix": ["model.junit.mocks.json", "mjumj"],
         "body": [
             "{",
                 "\t\"${1:nodeName}\": {",
                     "\t\t\"jcr:primaryType\": \"nt:unstructured\",",
-                    "\t\t\"sling:resourceType\": \"${2:\"my-app/components/my-component\"}\",",
-                    "\t\t\"${3:propertyName}\": ${4:|\"propertyValue\",true,0|}",
+                    "\t\t\"sling:resourceType\": \"${2:my-app/components/my-component}\",",
+                    "\t\t\"${3:propertyName}\": ${4|\"propertyValue\",true,0|}",
                 "\t}",
             "}"
         ],

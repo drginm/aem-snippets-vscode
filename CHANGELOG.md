@@ -11,6 +11,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Sling jobs, workflows
 
+## [0.13.0] - 2021-03-17
+### Added
+- Added include and tabs to the touch ui dialogs
+- Some quick angular snippets
+
+### Changed
+- Renamed sling model snippets given that they were too long
+- Fixed bad snippets
+
 ## [0.12.0] - 2021-03-10
 ### Added
 - Sling Model Unit tests
