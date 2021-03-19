@@ -29,14 +29,14 @@
         "body": [
             "<${1:nodeName}",
                 "\tjcr:primaryType=\"nt:unstructured\"",
-                "\tsling:resourceType=\"granite/ui/components/foundation/form/checkbox\"",
+                "\tsling:resourceType=\"granite/ui/components/coral/foundation/form/checkbox\"",
                 "\ttext=\"${2:Checkbox Label}\"",
                 "\tname=\"./$1\"",
                 "\tvalue=\"true\"",
                 "\tuncheckedValue=\"false\"/>",
             "<$1TypeHint",
                 "\tjcr:primaryType=\"nt:unstructured\"",
-                "\tsling:resourceType=\"granite/ui/components/foundation/form/hidden\"",
+                "\tsling:resourceType=\"granite/ui/components/coral/foundation/form/hidden\"",
                 "\tname=\"./$1@TypeHint\"",
                 "\tvalue=\"Boolean\"/>"
         ],
@@ -86,7 +86,7 @@
         "body": [
             "<${1:elementName}",
                 "\tjcr:primaryType=\"nt:unstructured\"",
-                "\tsling:resourceType=\"cq/gui/components/authoring/dialog/fileupload\"",
+                "\tsling:resourceType=\"granite/ui/components/coral/foundation/form/fileupload\"",
                 "\tautoStart=\"{Boolean}false\"",
                 "\tclass=\"cq-droptarget\"",
                 "\tfileNameParameter=\"./${2:file}Name\"",
@@ -135,7 +135,7 @@
         "body": [
             "<${1:nodeName}",
                 "\tjcr:primaryType=\"nt:unstructured\"",
-                "\tsling:resourceType=\"granite/ui/components/foundation/form/multifield\"",
+                "\tsling:resourceType=\"granite/ui/components/coral/foundation/form/multifield\"",
                 "\tcomposite=\"{Boolean}true\"",
                 "\tfieldLabel=\"${2:Multifield Label}\">",
                 "\t<field",
@@ -156,7 +156,7 @@
         "body": [
             "<${1:nodeName}",
                 "\tjcr:primaryType=\"nt:unstructured\"",
-                "\tsling:resourceType=\"granite/ui/components/foundation/form/multifield\"",
+                "\tsling:resourceType=\"granite/ui/components/coral/foundation/form/multifield\"",
                 "\tfieldLabel=\"${2:Multifield Label}\">",
                 "\t<field",
                     "\t\tjcr:primaryType=\"nt:unstructured\"",
@@ -172,7 +172,7 @@
         "body": [
             "<${1:nodeName}",
                 "\tjcr:primaryType=\"nt:unstructured\"",
-                "\tsling:resourceType=\"granite/ui/components/foundation/include\"",
+                "\tsling:resourceType=\"granite/ui/components/coral/foundation/include\"",
                 "\tpath=\"./${1:my-app/components/my-component}\"/>"
         ],
         "description": "Include Fields - Touch UI Dialog"
